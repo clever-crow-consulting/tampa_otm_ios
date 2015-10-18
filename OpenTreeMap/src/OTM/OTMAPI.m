@@ -26,7 +26,9 @@
 
 +(ASIRequestCallback)liftResponse:(AZGenericCallback)callback {
     if (callback == nil) { return [^(id obj, id error) {} copy]; }
+    NSLog(@"req");
     return [^(ASIHTTPRequest* req) {
+        NSLog(@"debugging");
         if (req.responseStatusCode >= 200 && req.responseStatusCode <= 299) {
             callback([req responseData], nil);
         } else {
@@ -46,6 +48,7 @@
 }
 
 +(AZGenericCallback)jsonCallback:(AZGenericCallback)callback {
+    NSLog(@"debugging...");
     if (callback == nil) { return [^(id obj, id error) {} copy]; }
     return [^(NSData* data, NSError* error) {
             if (error) {

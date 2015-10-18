@@ -402,6 +402,7 @@
 
 - (MKTileOverlay *)buildOverlayForLayer:(NSString *)layer
                                  filter:(NSString *)filter {
+    NSLog(@"Debugging");
     OTMEnvironment *env = [OTMEnvironment sharedEnvironment];
     NSString *iid = [env instanceId];
     NSString *grev = [env geoRev];
@@ -409,7 +410,8 @@
     NSString *urlSfx = [env.api2 tileUrlTemplateForInstanceId:iid
                                                        geoRev:grev
                                                         layer:layer];
-
+    urlSfx = [urlSfx stringByReplacingOccurrencesOfString:@"otm"
+                                         withString:@"otm_tampa"];
     if (filter != nil) {
         filter = [OTMAPI urlEncode:filter];
         urlSfx = [urlSfx stringByAppendingFormat:@"&q=%@", filter];
@@ -420,7 +422,7 @@
                   [[OTMEnvironment sharedEnvironment] tileQueryStringAdditionalArguments]];
     }
 
-    NSString *host = env.tilerUrl;
+    NSString *host = @"http://131.247.223.141"; //env.tilerUrl;  // this is nil!
     NSString *url = [host stringByAppendingString:urlSfx];
 
     return [[MKTileOverlay alloc] initWithURLTemplate:url];

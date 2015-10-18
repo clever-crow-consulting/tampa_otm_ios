@@ -40,8 +40,9 @@
     [api loadInstanceInfo:instance
                   forUser:user
              withCallback:^(id json, NSError *error) {
-
+                 NSLog(@"loading instance...");
         if (error != nil) {
+            NSLog(@"Errors!");
           [UIAlertView showAlertWithTitle:nil
                                   message:@"There was a problem connecting to the server. Hit OK to try again."
                         cancelButtonTitle:@"OK"
@@ -51,6 +52,7 @@
                          [self loadInstance];
                        }];
         } else {
+          NSLog(@"No errors....");
           [[OTMEnvironment sharedEnvironment] updateEnvironmentWithDictionary:json];
             [self afterSplashDelaySegueTo:@"startWithInstance"];
         }
@@ -74,7 +76,7 @@
     NSTimeInterval seconds = [[OTMEnvironment sharedEnvironment] splashDelayInSeconds];
     self.triggerTime = [[NSDate date] timeIntervalSince1970] + seconds;
 
-    NSString *instance = [[OTMEnvironment sharedEnvironment] instance];
+    NSString *instance = @"tampa"; //[[OTMEnvironment sharedEnvironment] instance];
 
     if ([[OTMEnvironment sharedEnvironment] allowInstanceSwitch]) {
         instance = [[OTMPreferences sharedPreferences] instance];
@@ -86,6 +88,7 @@
         }
 
     } else {
+        NSLog(@"debuggine");
        [self loadInstance];
     }
 

@@ -42,9 +42,9 @@
         return;
     }
     if ([self locationServicesAvailable]) {
-
+        // they *ARE* available
         if (nil == [self locationManager]) {
-            [self setLocationManager:[[CLLocationManager alloc] init]];
+            [self setLocationManager:[[CLLocationManager alloc] init]];  // it *IS* nil
             [[self locationManager] setDesiredAccuracy:kCLLocationAccuracyHundredMeters];
         }
 
@@ -53,8 +53,21 @@
         // The delegate is cleared in stopFindingLocation so it must be reset
         // here.
         [[self locationManager] setDelegate:self];
+        
+        // Required to get iOS8 location services to run.
+        if ([[self locationManager] respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+              [[self locationManager] requestWhenInUseAuthorization];
+              [[self locationManager] startUpdatingLocation];
+            } else {
+              [[self locationManager] startUpdatingLocation];
+            }
+        
+        
+        
         [[self locationManager] startUpdatingLocation];
-        NSTimeInterval timeout = [[[OTMEnvironment sharedEnvironment] locationSearchTimeoutInSeconds] doubleValue];
+        
+        //NSTimeInterval timeout = [[[OTMEnvironment sharedEnvironment] locationSearchTimeoutInSeconds] doubleValue];
+        NSTimeInterval timeout = 1000000000;
         [self performSelector:@selector(stopFindingLocationAndExecuteCallback) withObject:nil afterDelay:timeout];
     } else {
         // TODO: More meaningful error

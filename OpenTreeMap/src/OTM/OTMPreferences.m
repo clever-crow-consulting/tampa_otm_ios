@@ -24,7 +24,7 @@ NSString* const kOTMPreferencesInstance = @"kOTMPreferencesInstance";
     self = [super init];
     if (self)
     {
-        [self setInstance:@""];
+        [self setInstance:@"tampa"];
     }
     return self;
 }

@@ -52,6 +52,7 @@
 }
 
 -(void)logUserIn:(OTMUser*)user callback:(AZUserCallback)callback {
+    NSLog(@"Your message here");    //
     [self.noPrefixRequest get:@"user"
                  withUser:user
                    params:nil
@@ -71,8 +72,8 @@
               user.reputation = [[json valueForKey:@"reputation"] intValue];
 
               [user setLoggedIn:YES];
-
-              [self loadInstanceInfo:[[OTMEnvironment sharedEnvironment] instance]
+                NSLog(@"Debugging loadInstanceInfo forUser:user with Callback");
+                [self loadInstanceInfo:[[OTMEnvironment sharedEnvironment] instance]
                              forUser:user
                         withCallback:^(id json, NSError *error) {
                   if (!error) {

@@ -34,7 +34,7 @@
 
         // Just assume that this is correct for now. Prevents app
         // loading race conditions
-        self.loggedInUser = user;
+        //self.loggedInUser = user;
 
         if (user.username && user.password && [user.username length] > 0 && [user.password length] > 0) {
             self.runningLogin = YES;

@@ -70,7 +70,7 @@ NSString * const OTMEnvironmentDateStringShort = @"yyyy-MM-dd";
     self.secretKey = [implementation valueForKey:@"SecretKey"];
 
     self.instance = [implementation objectForKey:@"instance"];
-    self.allowInstanceSwitch = YES;
+    self.allowInstanceSwitch = NO; //YES;
     if (self.instance && ![self.instance isEqualToString:@""]) {
         self.allowInstanceSwitch = NO;
     }
