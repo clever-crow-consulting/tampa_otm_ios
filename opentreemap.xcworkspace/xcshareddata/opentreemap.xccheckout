@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5D8BAB69-CAE9-4EB1-9A2D-B80140CBD151</string>
+	<key>IDESourceControlProjectName</key>
+	<string>opentreemap</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8EF0FF89FF0A2FC88C3F3E83AFD5E38F85F7C708</key>
+		<string>https://github.com/OpenTreeMap/otm-ios.git</string>
+		<key>EA5461385D4D27AC28CFA836633A41AEE61BCD04</key>
+		<string>https://github.com/azavea/OpenTreeMap-iOS-skin.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>opentreemap.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8EF0FF89FF0A2FC88C3F3E83AFD5E38F85F7C708</key>
+		<string>..</string>
+		<key>EA5461385D4D27AC28CFA836633A41AEE61BCD04</key>
+		<string>../../MobileSkin</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/OpenTreeMap/otm-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8EF0FF89FF0A2FC88C3F3E83AFD5E38F85F7C708</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EA5461385D4D27AC28CFA836633A41AEE61BCD04</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MobileSkin</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8EF0FF89FF0A2FC88C3F3E83AFD5E38F85F7C708</string>
+			<key>IDESourceControlWCCName</key>
+			<string>otm-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>
