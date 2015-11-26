@@ -422,6 +422,7 @@
                   [[OTMEnvironment sharedEnvironment] tileQueryStringAdditionalArguments]];
     }
 
+    // NSString *host = @"http://app.tampatreemap.usf.edu"; //env.tilerUrl;  // this is nil!
     NSString *host = @"http://131.247.223.141"; //env.tilerUrl;  // this is nil!
     NSString *url = [host stringByAppendingString:urlSfx];
 
