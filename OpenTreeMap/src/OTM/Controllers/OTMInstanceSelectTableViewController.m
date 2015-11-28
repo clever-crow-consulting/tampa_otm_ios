@@ -56,7 +56,9 @@
     // This is about 200 miles, which is greater than Seattle -> Portland,
     // Philly -> Washington DC. It seemed reasonable when we picked it, but
     // is arbitrary.
-    [[OTMPreferences sharedPreferences] setInstance:@"Tampa"];
+    
+    [[OTMPreferences sharedPreferences] setInstance:@""];  // hard-code to `tampa`?
+    
     [[[OTMEnvironment sharedEnvironment] api] resetSpeciesList];
 
     OTMLoginManager* loginManager = [SharedAppDelegate loginManager];
@@ -74,7 +76,7 @@
     [[self locationManager] findLocation:^(CLLocation *location, NSError *error) {  // this throws an error
         // TODO: if there is an error, we need to show some list of instances
         if (!error) {
-            NSLog(@"Debugging");
+            NSLog(@"No Error in locationManager findLocation...");
             [[[OTMEnvironment sharedEnvironment] api]
              getInstancesNearLatitude:location.coordinate.latitude
                             longitude:location.coordinate.longitude
