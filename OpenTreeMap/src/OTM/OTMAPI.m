@@ -26,19 +26,36 @@
 
 +(ASIRequestCallback)liftResponse:(AZGenericCallback)callback {
     if (callback == nil) { return [^(id obj, id error) {} copy]; }
-    NSLog(@"req");
+    
+    
+    
     return [^(ASIHTTPRequest* req) {
-        NSLog(@"debugging");
+        
+        NSLog(@"Value of req.url is: %@", req.url);
+        
         if (req.responseStatusCode >= 200 && req.responseStatusCode <= 299) {
+            
+            //NSLog(@"Value of req.responseStatusCode is: %@", req.responseStatusCode);
+            
             callback([req responseData], nil);
         } else {
+            
+            NSLog(@"Value of req.url is: %@", req.url);
+            NSLog(@"Value of req.requestMethod is: %@", req.requestMethod);
+
+            //NSLog(@"Value of req.responseStatusCode is: %@", req.responseStatusCode);
+            
             NSString *responseBodyAsString = [[NSString alloc] initWithData:[req responseData] encoding:NSUTF8StringEncoding];
+            
+            NSLog(@"Value of responseBodyAsString is: %@", responseBodyAsString);
+            
             NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
                 req.url, @"url",
                 req.requestMethod, @"method",
                 responseBodyAsString, @"body",
                 [NSNumber numberWithInt:req.responseStatusCode], @"statusCode",
                 nil];
+            
             NSError* error = [[NSError alloc] initWithDomain:@"otm"
                                                         code:req.responseStatusCode
                                                     userInfo:userInfo];
@@ -48,7 +65,7 @@
 }
 
 +(AZGenericCallback)jsonCallback:(AZGenericCallback)callback {
-    NSLog(@"debugging...");
+    NSLog(@"Entering AZGenericCalback...");
     if (callback == nil) { return [^(id obj, id error) {} copy]; }
     return [^(NSData* data, NSError* error) {
             if (error) {
