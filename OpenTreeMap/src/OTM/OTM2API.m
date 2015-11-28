@@ -52,19 +52,33 @@
 }
 
 -(void)logUserIn:(OTMUser*)user callback:(AZUserCallback)callback {
-    NSLog(@"Your message here");    //
+    
+    NSLog(@"Entering logUserIn...");
+    
     [self.noPrefixRequest get:@"user"
                  withUser:user
                    params:nil
                  callback:[OTMAPI liftResponse:[OTMAPI jsonCallback:^(id json, NSError* error) {
             if (error) {
+              
               [user setLoggedIn:NO];
+                
               if (error.code == 401) {
+                  
+                NSLog(@"Value of error.code is %ld", (long)error.code);
+                  
                 callback(nil, nil, kOTMAPILoginResponseInvalidUsernameOrPassword);
+                  
               } else {
+                  
+                NSLog(@"Value of error.code is %ld", (long)error.code);
+                  
                 callback(nil, nil, kOTMAPILoginResponseError);
               }
             } else {
+              
+                NSLog(@"No errors. Setting user details...");
+                
               user.email = [json objectForKey:@"email"];
               user.firstName = [json objectForKey:@"first_name"];
               user.lastName = [json objectForKey:@"last_name"];
