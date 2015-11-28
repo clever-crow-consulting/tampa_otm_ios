@@ -32,11 +32,15 @@
 }
 
 - (void)loadInstance {
+    
     OTMLoginManager* loginManager = [SharedAppDelegate loginManager];
+    
     AZUser* user = [loginManager loggedInUser];
 
     OTM2API *api = [[OTMEnvironment sharedEnvironment] api2];
+    
     NSString *instance = [[OTMEnvironment sharedEnvironment] instance];
+    
     [api loadInstanceInfo:instance
                   forUser:user
              withCallback:^(id json, NSError *error) {
@@ -76,8 +80,10 @@
     NSTimeInterval seconds = [[OTMEnvironment sharedEnvironment] splashDelayInSeconds];
     self.triggerTime = [[NSDate date] timeIntervalSince1970] + seconds;
 
-    NSString *instance = @"tampa"; //[[OTMEnvironment sharedEnvironment] instance];
-
+    // This was Hard-Coded as `tampa` during development
+    NSString *instance = [[OTMEnvironment sharedEnvironment] instance];
+    
+    
     if ([[OTMEnvironment sharedEnvironment] allowInstanceSwitch]) {
         instance = [[OTMPreferences sharedPreferences] instance];
         if (instance && ![instance isEqualToString:@""]) {
