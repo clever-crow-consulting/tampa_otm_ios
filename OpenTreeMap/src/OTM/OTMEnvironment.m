@@ -68,12 +68,16 @@ NSString * const OTMEnvironmentDateStringShort = @"yyyy-MM-dd";
 
     self.accessKey = [implementation valueForKey:@"AccessKey"];
     self.secretKey = [implementation valueForKey:@"SecretKey"];
-
     self.instance = [implementation objectForKey:@"instance"];
-    self.allowInstanceSwitch = NO; //YES;
+    
+    self.allowInstanceSwitch = YES;  // Maybe disable this for Tampa?
+    
     if (self.instance && ![self.instance isEqualToString:@""]) {
-        self.allowInstanceSwitch = NO;
+        self.allowInstanceSwitch = NO;  // Gets disabled here anyway.
     }
+
+    // Can't print instance attributes this way.
+    //NSLog(@"Value of allowInstanceSwitch is: %@", self.allowInstanceSwitch);
 
     self.dateFormat = @"MMMM d, yyyy h:mm a";
     self.detailLatSpan = 0.0007;
