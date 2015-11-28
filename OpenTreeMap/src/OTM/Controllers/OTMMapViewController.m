@@ -402,16 +402,21 @@
 
 - (MKTileOverlay *)buildOverlayForLayer:(NSString *)layer
                                  filter:(NSString *)filter {
-    NSLog(@"Debugging");
+    NSLog(@"Debugging MKTileOverlay...");
     OTMEnvironment *env = [OTMEnvironment sharedEnvironment];
     NSString *iid = [env instanceId];
     NSString *grev = [env geoRev];
+    
+    NSLog(@"iid is: %@", iid);
+    NSLog(@"grev is: %@", grev);
 
     NSString *urlSfx = [env.api2 tileUrlTemplateForInstanceId:iid
                                                        geoRev:grev
                                                         layer:layer];
+    
     urlSfx = [urlSfx stringByReplacingOccurrencesOfString:@"otm"
                                          withString:@"otm_tampa"];
+    
     if (filter != nil) {
         filter = [OTMAPI urlEncode:filter];
         urlSfx = [urlSfx stringByAppendingFormat:@"&q=%@", filter];
@@ -422,9 +427,14 @@
                   [[OTMEnvironment sharedEnvironment] tileQueryStringAdditionalArguments]];
     }
 
-    // NSString *host = @"http://app.tampatreemap.usf.edu"; //env.tilerUrl;  // this is nil!
-    NSString *host = @"http://131.247.223.141"; //env.tilerUrl;  // this is nil!
+    NSLog(@"urlSfx is: %@", urlSfx);
+    
+    NSLog(@"env.tilerUrl is: %@", env.tilerUrl);
+    
+    NSString *host = env.tilerUrl;
     NSString *url = [host stringByAppendingString:urlSfx];
+    
+    NSLog(@"url is: %@", url);
 
     return [[MKTileOverlay alloc] initWithURLTemplate:url];
 }
