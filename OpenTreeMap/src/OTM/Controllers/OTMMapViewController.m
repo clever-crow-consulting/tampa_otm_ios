@@ -410,6 +410,9 @@
                                                        geoRev:grev
                                                         layer:layer];
 
+    urlSfx = [urlSfx stringByReplacingOccurrencesOfString:@"otm"
+	                                                  withString:@"otm_tampa"];
+
     if (filter != nil) {
         filter = [OTMAPI urlEncode:filter];
         urlSfx = [urlSfx stringByAppendingFormat:@"&q=%@", filter];
