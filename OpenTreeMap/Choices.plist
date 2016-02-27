@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+        <key>canopy_conditions</key>
+        <array>
+
+                <dict>
+                        <key>key</key>
+                        <string>1</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Full - No Gaps</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>2</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Small Gaps (up to 25% missing)</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>3</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Moderate Gaps (up to 50% missing)</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>4</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Large Gaps (up to 75% missing)</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>5</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Little or None (up to 100% missing)</string>
+                </dict>
+        </array>
+
+        <key>plot_types</key>
+        <array>
+
+                <dict>
+                        <key>key</key>
+                        <string>1</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Well/Pit</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>2</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Median/Island</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>3</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Tree Lawn</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>4</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Park</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>5</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Planter</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>6</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Other</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>7</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Yard</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>8</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Natural Area</string>
+                </dict>
+        </array>
+
+        <key>tree_stewardship</key>
+        <array>
+
+                <dict>
+                        <key>key</key>
+                        <string>1</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Enlarging the Planting Area</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>2</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Adding a Guard</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>3</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Removing a Guard</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>4</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Herbaceous Planting</string>
+                </dict>
+        </array>
+
+        <key>projects</key>
+        <array>
+        </array>
+
+        <key>plot_stewardship</key>
+        <array>
+
+                <dict>
+                        <key>key</key>
+                        <string>1</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Watering</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>2</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Pruning</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>3</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Mulching, Adding Compost or Amending Soil</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>4</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Removing Debris or Trash</string>
+                </dict>
+        </array>
+
+        <key>conditions</key>
+        <array>
+
+                <dict>
+                        <key>key</key>
+                        <string>1</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Dead</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>2</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Critical</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>3</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Poor</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>4</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Fair</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>5</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Good</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>6</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Very Good</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>7</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Excellent</string>
+                </dict>
+        </array>
+
+        <key>powerlines</key>
+        <array>
+
+                <dict>
+                        <key>key</key>
+                        <string>1</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Yes</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>2</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>No</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>3</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Unknown</string>
+                </dict>
+        </array>
+
+        <key>alerts</key>
+        <array>
+
+                <dict>
+                        <key>key</key>
+                        <string>1</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Needs Watering</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>2</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Needs Pruning</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>3</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Should be Removed</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>4</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Pest Or Disease Present</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>5</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Guard Should Be Removed</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>6</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Stakes And Ties Should Be Removed</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>7</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Construction Work In The Area</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>8</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Touching Wires</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>9</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Blocking Signs or Traffic Signals</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>10</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Improperly Pruned or Topped</string>
+                </dict>
+        </array>
+
+        <key>sidewalks</key>
+        <array>
+
+                <dict>
+                        <key>key</key>
+                        <string>1</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Minor or No Damage</string>
+                </dict>
+
+                <dict>
+                        <key>key</key>
+                        <string>2</string>
+                        <key>type</key>
+                        <string>int</string>
+                        <key>value</key>
+                        <string>Raised More Than 3/4 Inch</string>
+                </dict>
+        </array>
+
+        <key>actions</key>
+        <array>
+        </array>
+</dict>
+</plist>

@@ -871,7 +871,7 @@
 			name = OpenTreeMapTests;
 			productName = OpenTreeMapTests;
 			productReference = E943974114F447EB007CD0D1 /* OpenTreeMapTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -880,6 +880,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = OTM;
+				LastTestingUpgradeCheck = 0720;
 				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = E943970C14F447EB007CD0D1 /* Build configuration list for PBXProject "OpenTreeMap" */;
